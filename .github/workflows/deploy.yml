@@ -7,7 +7,7 @@ on:
   pull_request:
     branches:
       - main
-  workflow_dispatch:  # Enables manual runs
+  workflow_dispatch: # Enables manual runs
 
 jobs:
   deploy:
@@ -21,7 +21,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
-          key: ${{ secrets.SSHKEY }}
+          password: ${{ secrets.PASSWORD }}
           script: |
             cd /home/otlu-gauravsharma/htdocs/gauravsharma.otlu.online || exit 1
             chmod +x .scripts/deploy.sh
