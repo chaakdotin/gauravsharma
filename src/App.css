@@ -3,24 +3,43 @@
   --h-available: calc(100vh - var(--h-header) - 5rem);
   --spacing-header: calc(3.5rem + 2rem);
   --spacing-sticky: calc(var(--h-header) + 3rem);
+  --background: #fff;
+  --text-color: #000;
 }
 
+[data-theme='dark'] {
+  --background: #111;
+  --text-color: #fff;
+}
+body{
+  background-color: var(--background)!important;
+  color: var(--text-color)!important;
+  
+}
 .container-fluid {
   --bs-gutter-x: 0px;
 }
 
-.color-white,
-.color-white .language-switch .active {
+[data-theme='dark'],
+[data-theme='dark'] .language-switch .active {
   color: #fff !important;
 }
 
-.color-white .navbar-custom,
-.color-white .home,
-.color-white .logo span.o,
-.color-white .menu-btn {
-  border-color: #fff !important;
+[data-theme='dark'] .navbar-custom,
+[data-theme='dark'] .home,
+[data-theme='dark'] .logo span.o,
+[data-theme='dark'] .menu-btn {
+  border-color: var(--text-color) !important;
 }
 
+[data-theme='dark'] .menu-col{
+  background-color: var(--background)!important;
+  color: var(--text-color) !important;
+}
+.menu-col{
+  background-color: var(--background);
+  color: var(--text-color);
+}
 header {
   padding-top: 26.6667px;
   padding-left: 26.6667px;
@@ -41,7 +60,6 @@ header {
   padding-left: 20px;
   height: 60px;
   position: relative;
-  background-color: #fff;
 }
 
 .logo {
@@ -118,16 +136,21 @@ svg {
   display: flex;
   align-items: flex-end;
 }
-.menu-item-cell span{
+.menu-item-cell-1 {
+  height: 117px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 0px!important;
+}
+.menu-item-cell-1 span{
   font-size: 4.8rem;
 }
 .menu .con {
   gap: 10px;
-  height: fit-content;
 }
 
 .menu-active {
-  height: 100%;
+  height: fit-content;
   z-index: 1;
 
 }
@@ -144,7 +167,10 @@ svg {
   background-color: #000;
   color: #fff;
 }
-
+[data-theme='dark'] .menu-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
 .header-switcher {
   width: 16px;
   height: 16px;

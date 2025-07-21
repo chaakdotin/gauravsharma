@@ -1,8 +1,16 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function header() {
     const [clicked, setClicked] = useState(false);
+   const [isDark, setIsDark] = useState(false);
     const [showOverlay, setShowOverlay] = useState(false);
+    const toggleTheme = () => {
+        const newTheme = isDark ? 'light' : 'dark';
+        setIsDark(!isDark);
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    };
+
     const handleClick = () => {
         if(clicked == false){
             setClicked(prev => !prev);    
@@ -17,7 +25,12 @@ export default function header() {
         
         
     };
-
+    useEffect(() => {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        const dark = savedTheme === 'dark';
+        setIsDark(dark);
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    }, []);
     return (
         <>
             <div className="position-fixed custom-nav top-0"></div>
@@ -33,8 +46,9 @@ export default function header() {
                         transition: 'opacity 0.5s ease',
                         zIndex: 1,
                     }}
+                    onClick={handleClick}
                 />
-                <div className="container-fluid navbar-custom d-flex z-3">
+                <div className={`container-fluid navbar-custom d-flex z-3 ${clicked ? isDark === true ? '': 'bg-white' : ''}`}>
                     <div className="d-flex justify-content-between align-items-center h-100 col">
                         {/* Logo */}
                         <div className="logo">
@@ -76,7 +90,7 @@ export default function header() {
                             </svg>
                         </div>
                         {/* Toggle */}
-                        <div className="toggle-container">
+                        <div className="toggle-container" onClick={toggleTheme}>
                             <div className="header-switcher bg-white "></div>
                             <div className="header-switcher bg-black ml"></div>
                         </div>
@@ -96,9 +110,9 @@ export default function header() {
 
             </header>
             
-            <div className={`position-fixed menu ${clicked ? 'menu-active' : ''} d-flex`}  onClick={handleClick}>
-                <div className='d-flex w-100 con'>
-                    <div className='col bg-white  '>
+            <div className={`position-fixed menu ${clicked ? 'menu-active' : ''} d-flex`}  >
+                <div className='d-flex w-100 con position-relative z-2'>
+                    <div className='col menu-col' >
                         <div className='border menu-item-cell px-3 py-4'>
                             hhdh
                         </div>
@@ -108,11 +122,11 @@ export default function header() {
                         <div className='border menu-item-cell px-3 py-4'>
                             hhdh
                         </div>
-                        <div className='border menu-item-cell px-3 py-4'>
+                        <div className='border menu-item-cell-1 px-3 py-4'>
                             <span>Works</span>
                         </div>
                     </div>
-                    <div className='col bg-white '>
+                    <div className='col menu-col' >
                         <div className='border menu-item-cell px-3 py-4'>
                             hhdh
                         </div>
@@ -121,9 +135,12 @@ export default function header() {
                         </div>
                         <div className='border menu-item-cell px-3 py-4'>
                             hhdh
+                        </div>
+                         <div className='border menu-item-cell-1 px-3 py-4'>
+                            <span>Works</span>
                         </div>
                     </div>
-                    <div className='col bg-white '>
+                    <div className='col menu-col' >
                         <div className='border menu-item-cell px-3 py-4'>
                             hhdh
                         </div>
@@ -132,6 +149,9 @@ export default function header() {
                         </div>
                         <div className='border menu-item-cell px-3 py-4'>
                             hhdh
+                        </div>
+                         <div className='border menu-item-cell-1 px-3 py-4'>
+                            <span>Works</span>
                         </div>
                     </div>
                 </div>
