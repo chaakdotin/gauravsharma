@@ -12,7 +12,6 @@ export default function home() {
     setActiveVideo('');
     document.body.classList.remove('color-white');
   };
-
   const videoSources = {
     urwerk: 'https://mooders.net/wp-content/uploads/2024/02/URWERK-Intro-3.mp4',
     cartier: 'https://mooders.net/wp-content/uploads/2024/02/cartier-time-project-2.mp4',
