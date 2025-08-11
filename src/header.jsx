@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import './assets/css/header-responsive.css'
-export default function header() {
+import css from './assets/css/header-responsive.css?raw'
+export default function Header() {
     const [isDark, setIsDark] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     useEffect(() => {
@@ -23,6 +23,7 @@ export default function header() {
     
     return (
         <>
+            <style dangerouslySetInnerHTML={{ __html: css }} />
             <div className="header-bg position-fixed top-0 left-0 w-100 custom-header z-1"></div>
             <header className='header transparent pt-container px-container '>
                 <div className='header-menu '>
@@ -88,7 +89,7 @@ export default function header() {
                 <div className='header-menu-wrapper position-fixed top-header pt-3 left-0 align-items-start w-100 grid-w uppercase pointer-events-none overflow-hidden' style={{visibility:`${isOpen ? 'visible' : 'hidden'}`, opacity:`${isOpen ? '1' : '0'}`}}>
                     <div className='header-item-col  d-flex flex-column justify-between pointer-events-auto transition-mode'>
                         <div className='d-flex flex-column'>
-                            <a href="#" className='link header-item-cell -mt-px hidden d-md-flex align-items-md-end  transition-mode'>
+                            <a href="#" className='linkH-item-cell -mt-px hidden d-md-flex align-items-md-end  transition-mode'>
                                 <span className='words chars splitting'>
                                     <span>MOTION MOTION TRAILER</span>
                                 </span>
