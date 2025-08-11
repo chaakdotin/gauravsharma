@@ -4,7 +4,8 @@ set -e
 echo "Deployment started..."
 
 # Pull the latest version of the app
-git pull
+git pull --rebase
+
 echo "New changes copied to server !"
 
 echo "Remove Old Dependencies..."
