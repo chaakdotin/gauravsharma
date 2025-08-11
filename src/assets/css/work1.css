@@ -231,10 +231,10 @@
         font-size: 100px !important;
         letter-spacing: -8.1754px !important;
     }
-    .header-element {
+    /* .header-element {
         grid-column-end: 24;
         grid-column-start: 1;
-    }
+    } */
     .header-toggler {
         padding-left: 2rem;
         padding-right: 2rem;

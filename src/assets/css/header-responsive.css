@@ -59,18 +59,16 @@
 }
 @media (max-width:480px) {
   .header-element {
-        grid-column-end: 20;
-        grid-column-start: 1;
-    }
-    .header-toggler {
-        padding-left: 2rem;
-        padding-right: 2rem;
-        grid-column-start: 20;
-    }
-    .px-container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-    
-    
+    grid-column-end: 20;
+    grid-column-start: 1;
+  }
+  .header-toggler {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    grid-column-start: 20;
+  }
+  .px-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
