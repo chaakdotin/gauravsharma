@@ -2,8 +2,7 @@ import { useState } from 'react'
 import './assets/css/App.css'
 import Header from './header'
 import Home from './home'
-import Work1 from './work1'
-import Work1 from './work1'
+import Work from './work1'
 import Work2 from './work1'
 import Work3 from './work1'
 import Work4 from './work1'
@@ -23,7 +22,7 @@ function App() {
       <Header />
       {/* <img src="./demo/Screenshot 2025-08-02 at 18.23.53.png" alt="" style={{position:"fixed",zIndex:-1, pointerEvents:"none", opacity:0.5, width:"100vw",height:"100vh", top:0, left:0}}/> */}
       <Routes>
-        <Route path="/" element={<Work1 />} />
+        <Route path="/" element={<Work />} />
         <Route path="/work" element={<Work1 />} />
         <Route path="/work" element={<Work2 />} />
         <Route path="/work" element={<Work3 />} />
