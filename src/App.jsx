@@ -11,6 +11,7 @@ function App() {
 
   return (
     <Router>
+      
       <Header />
       {/* <img src="./demo/Screenshot 2025-08-02 at 18.23.53.png" alt="" style={{position:"fixed",zIndex:-1, pointerEvents:"none", opacity:0.5, width:"100vw",height:"100vh", top:0, left:0}}/> */}
       <Routes>

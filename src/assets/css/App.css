@@ -1,5 +1,159 @@
 
 
+@font-face {
+    font-display: swap;
+    font-family: MaisonNeue;
+    font-style: normal;
+    font-weight: 500;
+    src: url(/fonts/MaisonNeue-Medium.d7e095.woff2) format("woff2"),url(/fonts/MaisonNeue-Medium.b386b6.woff) format("woff")
+}
+@font-face {
+    font-display: swap;
+    font-family: MaisonNeue;
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/MaisonNeue-Bold.e772f0.woff2) format("woff2"),url(/fonts/MaisonNeue-Bold.10c7bb.woff) format("woff")
+}
+
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-black-rgb: 0 0 0;
+    --color-grid: 255 0 0;
+    --color-blue: 0 0 255;
+    --color-primary: #fff;
+    --color-primary-rgb: 255 255 255;
+    --color-secondary: #000;
+    --color-secondary-rgb: 0 0 0;
+    --delay: 0.017s;
+    --ease-out: cubic-bezier(0.23,1,0.32,1);
+    --ease-in: cubic-bezier(0.12,0,0.39,0);
+    --ease-in-out: cubic-bezier(0.86,0,0.07,1);
+    --ease-out-back: cubic-bezier(0.175,0.885,0.32,1.275);
+    --size: 375;
+    --vh: calc(var(--wh, 1vh) * 100);
+    --padding-container: 1rem;
+    --h-header: 4.5rem;
+    --h-available: calc(var(--vh) - var(--h-header) - 3rem);
+    --spacing-header: calc(var(--h-header) + 2rem);
+    --spacing-sticky: calc(var(--h-header) + 3rem);
+    --image-width: 100%;
+    --image-height: 100%;
+    --cursor-x: 0;
+    --cursor-y: 0;
+    --header-height:4.5rem;
+    --border-width: 1px;
+    --gap-grid: 1rem;
+    --grid-cols: 24;  
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+
+}
+
+@media (min-width: 768px) {
+    :root {
+        --size: 768;
+        --padding-container: 2rem;
+        --h-available: calc(100vh - var(--h-header) - 5rem);
+        --spacing-header: calc(var(--h-header) + 2rem);
+        --spacing-sticky: calc(var(--h-header) + 3rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --size: 1024;
+    }
+}
+@media (min-width: 1200px) and (hover: hover) {
+    :root {
+        --size: 1440;
+    }
+}
+html {
+    font-size: calc((100vw / var(--size)) * 10);
+    line-height: 1.3;
+}
+body:not(.data) {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    background-color: var(--color-primary);
+    font-family: MaisonNeue, sans-serif;
+    font-size: 1.2rem;
+    line-height: 133%;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    font-family: MaisonNeue;
+}
+body:not(.data).dark, body:not(.data).dark-force {
+    --color-primary: var(--color-black);
+    --color-secondary: var(--color-white);
+    --color-primary-rgb: 0 0 0;
+    --color-secondary-rgb: 255 255 255;
+}
+.bg-primary {
+    background-color: var(--color-primary);
+}
+.pt-container {
+    padding-top: var(--padding-container);
+}
+.px-container {
+    padding-left: var(--padding-container);
+    padding-right: var(--padding-container);
+}
+.mb-10 {
+    margin-bottom: 1rem;
+}
+.z-header {
+    z-index: 10;
+}
+.top-0 {
+    top: 0;
+}
+.left-0 {
+    left: 0;
+}
+.sticky {
+    position: sticky;
+}
+
+html::-webkit-scrollbar {
+    width:5px
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-left: 1px solid var(--color-black)
+}
+
+html ::-webkit-scrollbar-thumb {
+    background-color: var(--color-black);
+    border: 1px solid var(--color-black)
+}
+
+html.dark ::-webkit-scrollbar-track {
+    background-color: var(--color-black);
+    border-left: 1px solid #fff
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border: 1px solid #fff
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+    height: 0;
+    width: 0
+}
+
 
 
 body{
