@@ -43,8 +43,8 @@
     --cursor-x: 0;
     --cursor-y: 0;
     --header-height:4.5rem;
-    --border-width: 1px;            /* Tailwind's border-px = 1px */
-    --gap-grid: 1rem;               /* Replace with your desired gap value */
+    --border-width: 1px;
+    --gap-grid: 1rem;
     --grid-cols: 24;  
     --tw-rotate: 0;
     --tw-skew-x: 0;

@@ -7,8 +7,11 @@ echo "Deployment started..."
 git pull
 echo "New changes copied to server !"
 
+echo "Remove Old Dependencies..."
+rm -rf node_modules package-lock.json
+
 echo "Installing Dependencies..."
-npm install --yes
+npm install
 
 echo "Creating Production Build..."
 # For ReactJS VueJS and Nuxt JS
