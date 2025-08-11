@@ -7,7 +7,6 @@
     font-weight: 500;
     src: url(/fonts/MaisonNeue-Medium.d7e095.woff2) format("woff2"),url(/fonts/MaisonNeue-Medium.b386b6.woff) format("woff")
 }
-
 @font-face {
     font-display: swap;
     font-family: MaisonNeue;
