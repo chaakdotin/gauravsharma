@@ -90,7 +90,7 @@ export default function header() {
                 <div className='header-menu-wrapper position-fixed top-header pt-3 left-0 align-items-start w-100 grid-w uppercase pointer-events-none overflow-hidden' style={{visibility:`${isOpen ? 'visible' : 'hidden'}`, opacity:`${isOpen ? '1' : '0'}`}}>
                     <div className='header-item-col  d-flex flex-column justify-between pointer-events-auto transition-mode'>
                         <div className='d-flex flex-column'>
-                            <a href="#" className='linkH-item-cell -mt-px hidden d-md-flex align-items-md-end  transition-mode'>
+                            <a href="#" className='link header-item-cell -mt-px hidden d-md-flex align-items-md-end  transition-mode'>
                                 <span className='words chars splitting'>
                                     <span>MOTION MOTION TRAILER</span>
                                 </span>
