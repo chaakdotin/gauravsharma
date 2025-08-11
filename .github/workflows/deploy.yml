@@ -23,6 +23,9 @@ jobs:
           port: ${{ secrets.PORT }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            cd /home/otlu-gauravsharma/htdocs/gauravsharma.otlu.online || exit 1
+            cd /home/otlu-mooders/htdocs/mooders.otlu.online || exit 1
             chmod +x .scripts/deploy.sh
             .scripts/deploy.sh
+
+
+
