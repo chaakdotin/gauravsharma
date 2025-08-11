@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import css from './assets/css/header-responsive.css?raw'
-export default function Header() {
+
+export default function header() {
     const [isDark, setIsDark] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     useEffect(() => {
