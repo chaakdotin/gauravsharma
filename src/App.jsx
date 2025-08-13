@@ -3,6 +3,8 @@ import './assets/css/App.css'
 import Header from './header'
 import Home from './home'
 import Work from './work1'
+import Aboutus from './Aboutus'
+import Work1 from './work1'
 import Work2 from './work1'
 import Work3 from './work1'
 import Work4 from './work1'
@@ -24,6 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Work />} />
         <Route path="/work" element={<Work1 />} />
+        <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/work" element={<Work2 />} />
         <Route path="/work" element={<Work3 />} />
         <Route path="/work" element={<Work4 />} />
