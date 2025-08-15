@@ -14,7 +14,7 @@ export default function work1() {
                     <div class="sidebar">
                         <div class="sidebar-content">
                             <div className='sidebar-content-1'>
-                                <span className='active'>ALLs</span>
+                                <span className='active'>ALL</span>
                                 <span>Original music</span>
                                 <span>Sound Design</span>
                                 <span>Sound Production</span>
