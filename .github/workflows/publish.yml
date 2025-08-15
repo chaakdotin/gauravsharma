@@ -41,7 +41,7 @@ jobs:
         run: |
           mkdir deploy
           # Copy everything except node_modules, .git, and .github
-          rsync -av --exclude=node_modules --exclude=.git --exclude=.github ./ deploy/
+          rsync -av --exclude=node_modules --exclude=.github ./ deploy/
           # Ensure build folder is also included
           rsync -av build/ deploy/build/
           rm -rf deploy/.git
