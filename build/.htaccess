@@ -1,0 +1,8 @@
+# Disable directory listing
+Options -Indexes
+
+# Redirect all to index.html (SPA support)
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
