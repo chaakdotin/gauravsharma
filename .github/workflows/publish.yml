@@ -1,39 +1,35 @@
-name: Deploy Vite Build
+name: Deploy All Files
 
 on:
   push:
     branches:
-      - main  # change if your default branch is different
+      - main
 
 permissions:
-  contents: write
+  contents: write  # Important: allow GITHUB_TOKEN to push
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # 1️⃣ Checkout repository
       - uses: actions/checkout@v4
 
-      # 2️⃣ Set up Node
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
+      # Your build step (optional)
       - name: Install & Build
         run: |
-          npm install
+          npm ci
           npm run build
 
-      - name: Remove .git folder from build
-        run: rm -rf build/.git
-      # 5️⃣ Deploy using git-publish-subdir-action
-      - name: Deploy entire repository
-        uses: s0/git-publish-subdir-action@develop
-        env:
-          REPO: self
-          BRANCH: build           # branch where you want the build files
-          FOLDER: .
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MESSAGE: "Build: ({sha}) {msg}"
+      # Ensure .git inside build is removed (if exists)
+      # - name: Remove nested .git
+      #   run: rm -rf build/.git
+
+      # Create commit before pushing branch
+      - name: Deploy entire repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan build
+          git add .
+          git commit -m "Initial build commit"
+          git push --force origin build
