@@ -108,7 +108,7 @@ export default function header() {
                         </div>
                         <a href="#" className='link header-item -mt-px hidden d-md-flex align-items-md-end  transition-mode'>
                             <span className='words chars splitting'>
-                                <span className='word'>WORKS</span>
+                                <span className='word'>WORK</span>
                             </span>
                         </a>
                     </div>
