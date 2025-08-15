@@ -19,6 +19,18 @@ jobs:
         run: |
           npm i
           npm run build
+      - name: Add .htaccess to build folder
+        run: |
+          cat << 'EOF' > build/.htaccess
+          # Disable directory listing
+          Options -Indexes
+
+          # Redirect all to index.html (SPA support)
+          RewriteEngine On
+          RewriteCond %{REQUEST_FILENAME} !-f
+          RewriteCond %{REQUEST_FILENAME} !-d
+          RewriteRule ^ index.html [L]
+          EOF
 
       # Ensure .git inside build is removed (if exists)
       # - name: Remove nested .git
