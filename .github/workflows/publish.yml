@@ -34,6 +34,6 @@ jobs:
         env:
           REPO: self
           BRANCH: build           # branch where you want the build files
-          FOLDER: .  #<- dot means "upload everything here"
+          FOLDER: .
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: "Build: ({sha}) {msg}"
