@@ -42,7 +42,7 @@ jobs:
         env:
           REPO: self
           BRANCH: build
-          FOLDER: '.'
+          FOLDER: './'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: "Deploy full project: ({sha}) {msg}"
           FORCE_PUSH: true
