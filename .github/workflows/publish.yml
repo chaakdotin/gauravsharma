@@ -45,4 +45,7 @@ jobs:
           FOLDER: '.'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: "Build: ({sha}) {msg}"
+          CLEAR_GLOBS_FILE: ''
+          SKIP_EMPTY_COMMITS: true
+          FORCE_PUSH: true
           
