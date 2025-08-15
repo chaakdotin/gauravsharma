@@ -9,7 +9,7 @@ export default function work1() {
             <div class="grid-w w-full">
                 {/* <div class=""> */}
                     <div className='col-span-full d-xl-none sidebar-content-2 d-flex align-items-center' style={{ borderWidth:1,borderBottomWidth: "0", borderColor: "#000", borderStyle: "solid", padding:"2rem",paddingTop:"4rem", height:80 }} >
-                        <span>Works</span>
+                        <span>Work</span>
                     </div>    
                     <div class="sidebar">
                         
