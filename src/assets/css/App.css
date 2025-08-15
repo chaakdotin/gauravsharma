@@ -3,7 +3,7 @@
   font-family: MaisonNeue;
   font-style: normal;
   font-weight: 500;
-  src: url(/fonts/MaisonNeue-Medium.d7e095.woff2) format("woff2"), url(/fonts/MaisonNeue-Medium.b386b6.woff) format("woff")
+  src: url(fonts/MaisonNeue-Medium.d7e095.woff2) format("woff2"), url(fonts/MaisonNeue-Medium.b386b6.woff) format("woff")
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-family: MaisonNeue;
   font-style: normal;
   font-weight: 700;
-  src: url(/fonts/MaisonNeue-Bold.e772f0.woff2) format("woff2"), url(/fonts/MaisonNeue-Bold.10c7bb.woff) format("woff")
+  src: url(fonts/MaisonNeue-Bold.e772f0.woff2) format("woff2"), url(fonts/MaisonNeue-Bold.10c7bb.woff) format("woff")
 }
 
 :root {

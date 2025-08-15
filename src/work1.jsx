@@ -3,7 +3,7 @@ import css from './assets/css/work1.css?raw'
 export default function work1() {
   return (
     <>
-        <style dangerouslySetInnerHTML={{ __html: css }} />
+        <style>{css}</style>
         <div style={{width:"100vw", height:"7.5rem"}}> </div> 
         <div class="">
             <div class="grid-w w-full">
