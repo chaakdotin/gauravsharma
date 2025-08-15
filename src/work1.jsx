@@ -12,9 +12,7 @@ export default function work1() {
                         <span>Works</span>
                     </div>    
                     <div class="sidebar">
-                        
                         <div class="sidebar-content">
-                            
                             <div className='sidebar-content-1'>
                                 <span className='active'>ALL</span>
                                 <span>Original music</span>
